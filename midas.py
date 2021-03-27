@@ -76,7 +76,8 @@ if __name__ == "__main__":
 jsonfile = json.load(%s-summary)
 print("Comparing real to desired, as always...")
 for i in data['sectionheader']:
-    if "Beta (5Y Monthly)" >= 1:
-        betarating = volatile
-    else:
-        betarating = relatively unvolatile
+    if "Beta (5Y Monthly)" >= 1: betarating = volatile
+    else: betarating = relatively unvolatile
+
+for i in data['sectionheader']
+    if "EPS (TTM)" 
