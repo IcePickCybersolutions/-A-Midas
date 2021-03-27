@@ -17,8 +17,8 @@ def get_headers():
             "sec-fetch-user": "?1",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"}
-            
-               
+
+
 def parse(ticker):
     url = "http://fincance.yahoo.com/quote/%s?p=%s" % (ticker, ticker)
     response = requests.get(
@@ -38,11 +38,11 @@ def parse(ticker):
         earnings_list = summary["calandarEvents"]['earnings']
         eps = summary["defaultKeyStatistics"]["trailingEPS"]['raw']
         datelist = []
-        
+
         for i in earnings_list['earningsDate']:
             datelist.append(i['fmt'])
         earnings_date = ' to '.join(datelist)
-        
+
         for table_data in summary_table:
             raw_table_key = table_data.xpath(
                 './/td[1]//text()')
@@ -59,9 +59,9 @@ def parse(ticker):
         print("Error in parsing json response: 'the code don't work right'")
         return {"error": "Failed to parse json response: error in midas"}
     except:
-        return {"error": "Unhandled Error: 'even the code don't know wtf happened'"}
-        
-        
+        return {"error": "Unhandled Error: 'even the code doesn't know wtf happened'"}
+
+
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
     argparser.add_argument('ticker', help='')
