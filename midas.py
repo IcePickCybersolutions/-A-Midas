@@ -78,8 +78,5 @@ print("Comparing real to desired, as always...")
 for i in data['sectionheader']:
     if "Beta (5Y Monthly)" >= 1:
         betarating = volatile
-
-    elif "Beta (5Y Monthly)" < 1:
+    else:
         betarating = relatively unvolatile
-
-    
