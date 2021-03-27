@@ -72,3 +72,14 @@ if __name__ == "__main__":
     print("Writing data to output file: 'saving it to a .json doc'")
     with open('%s-summary.json' % (ticker), 'w') as fp:
         json.dump(scraped_data, fp, indent=4)
+
+jsonfile = json.load(%s-summary)
+print("Comparing real to desired, as always...")
+for i in data['sectionheader']:
+    if "Beta (5Y Monthly)" >= 1:
+        betarating = volatile
+
+    elif "Beta (5Y Monthly)" < 1:
+        betarating = relatively unvolatile
+
+    
