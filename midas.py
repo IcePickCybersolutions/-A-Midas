@@ -79,5 +79,11 @@ for i in data['sectionheader']:
     if "Beta (5Y Monthly)" >= 1: betarating = volatile
     else: betarating = relatively unvolatile
 
-for i in data['sectionheader']
-    if "EPS (TTM)" 
+for i in data['section header']
+    if "EPS (TTM)" < 1
+        rating = "good"
+
+    elif "EPS (TTM)" >= 1 and
+        rating = "somewhat okay"
+
+    else: rating = "bad"
